@@ -4,150 +4,413 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Personal Website</title>
+  <meta name="description" content="Academic portfolio of Sarang Gosavi">
+  <title>Sarang Gosavi | Research</title>
+
   <style>
+    :root {
+      --navy: #18324c;
+      --blue: #2868a5;
+      --text: #344054;
+      --muted: #667085;
+      --line: #e5eaf0;
+      --soft: #f5f8fc;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f8fafc;
-      color: #263445;
-      line-height: 1.7;
+      background: white;
+      font-family: -apple-system, BlinkMacSystemFont,
+                   "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      line-height: 1.75;
     }
 
-    header {
-      background: #17324d;
-      color: white;
-      text-align: center;
-      padding: 65px 20px;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 36px;
-    }
-
-    nav {
-      background: #10273d;
-      padding: 15px;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
+    a {
+      color: var(--blue);
       text-decoration: none;
-      margin: 0 15px;
     }
 
-    nav a:hover {
+    a:hover {
       text-decoration: underline;
     }
 
-    main {
-      max-width: 850px;
+    .container {
+      max-width: 1060px;
+      padding: 0 28px;
       margin: auto;
-      padding: 30px 20px;
     }
 
-    section {
-      margin-bottom: 40px;
+    /* Navigation */
+
+    header {
+      background: white;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding-top: 22px;
+      padding-bottom: 22px;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 21px;
+      color: var(--navy);
+    }
+
+    nav {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    /* Introduction */
+
+    .hero {
+      display: grid;
+      grid-template-columns: 230px 1fr;
+      gap: 55px;
+      align-items: start;
+      padding-top: 85px;
+      padding-bottom: 65px;
+    }
+
+    .photo {
+      width: 230px;
+      height: 280px;
+      border-radius: 12px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--muted);
+      font-size: 14px;
+      overflow: hidden;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    h1, h2, h3 {
+      color: var(--navy);
+      line-height: 1.3;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin: 0 0 10px;
+    }
+
+    .position {
+      font-size: 18px;
+      color: var(--muted);
+      margin: 0 0 8px;
+    }
+
+    .university {
+      font-size: 16px;
+      color: var(--blue);
+      margin: 0 0 28px;
+    }
+
+    .bio p {
+      margin: 0 0 18px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 26px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    /* Sections */
+
+    section.content-section {
+      padding: 45px 0;
+      border-top: 1px solid var(--line);
     }
 
     h2 {
-      color: #17324d;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 8px;
+      font-size: 27px;
+      margin: 0 0 24px;
     }
 
-    .project {
-      background: white;
-      padding: 20px;
-      margin: 15px 0;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px #00000010;
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .tag {
+      background: #edf4fa;
+      color: #285b86;
+      padding: 7px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .project-card {
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 25px;
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+    }
+
+    .publication {
+      padding: 15px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .publication h3 {
+      margin: 0 0 8px;
+    }
+
+    .publication p {
+      margin: 4px 0;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--navy);
+      color: white;
+      padding: 11px 23px;
+      border-radius: 6px;
+    }
+
+    .button:hover {
+      background: var(--blue);
+      text-decoration: none;
     }
 
     footer {
-      background: #17324d;
-      color: white;
       text-align: center;
-      padding: 20px;
+      padding: 30px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      margin-top: 50px;
+      font-size: 14px;
+    }
+
+    /* Mobile layout */
+
+    @media (max-width: 720px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding-top: 45px;
+      }
+
+      .photo {
+        width: 190px;
+        height: 230px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .projects {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
+
 <body>
 
-  
-<header>
-  <h1>Sarang Gosavi</h1>
-  <p>PhD Student | Mechanical Engineering</p>
-  <p>University of Colorado Boulder</p>
-</header>
+  <!-- Top navigation -->
 
+  <header>
+    <div class="container navbar">
+      <a href="#about" class="logo">Sarang Gosavi</a>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#contact">Contact</a>
-  </nav>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      
-        <p>
-          I am a PhD student in the Department of Mechanical
-          Engineering at the University of Colorado Boulder,
-          working in plasmonics and its applications in
-          catalysis, with a strong focus on experimental
-          research.
+  <main class="container">
+
+    <!-- Homepage introduction -->
+
+    <section class="hero" id="about">
+
+      <div class="photo">
+        Profile photograph
+      </div>
+
+      <div class="bio">
+        <h1>Sarang Gosavi</h1>
+
+        <p class="position">
+          PhD Student | Mechanical Engineering
+        </p>
+
+        <p class="university">
+          University of Colorado Boulder
         </p>
 
         <p>
-          My research involves developing and studying
-          material systems and catalytic processes to
-          understand how light–matter interactions influence
-          chemical transformations.
+          I am a PhD student in the Department of
+          Mechanical Engineering at the University
+          of Colorado Boulder, working in plasmonics
+          and its applications in catalysis, with
+          a strong focus on experimental research.
         </p>
 
         <p>
-          My broader interests include quantum technologies,
-          nanomaterials, and advanced energy-related systems.
-          I am particularly interested in research at the
-          intersection of fundamental science, experimental
-          engineering, and technologies with potential
-          real-world impact.
+          My work involves developing and studying
+          material systems and catalytic processes
+          to understand how light-matter interactions
+          can influence chemical transformations.
         </p>
+
+        <p>
+          My broader interests include emerging
+          areas in quantum technologies, nanomaterials,
+          and advanced energy-related systems.
+          I am particularly interested in research
+          at the intersection of fundamental science,
+          experimental engineering, and technologies
+          with potential real-world impact.
+        </p>
+
+        <div class="social-links">
+          <!-- We will add your profile links later -->
+        </div>
+      </div>
 
     </section>
 
-    <section id="research">
-      <h2>Research & Projects</h2>
+    <!-- Research interests -->
 
-      <div class="project">
-        <h3>Project 1</h3>
-        <p>Description of my first project.</p>
-      </div>
+    <section id="research" class="content-section">
+      <h2>Research Interests</h2>
 
-      <div class="project">
-        <h3>Project 2</h3>
-        <p>Description of my second project.</p>
+      <div class="tags">
+        <span class="tag">Plasmonics</span>
+        <span class="tag">Photocatalysis</span>
+        <span class="tag">Light-Matter Interactions</span>
+        <span class="tag">Nanomaterials</span>
+        <span class="tag">Quantum Technologies</span>
+        <span class="tag">Energy Technologies</span>
       </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: yourname@example.com</p>
+    <!-- Research projects -->
+
+    <section id="projects" class="content-section">
+      <h2>Research Projects</h2>
+
+      <div class="projects">
+
+        <article class="project-card">
+          <h3>Research Project One</h3>
+          <p>
+            Project description will be added here.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <h3>Research Project Two</h3>
+          <p>
+            Project description will be added here.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Publications -->
+
+    <section id="publications" class="content-section">
+      <h2>Publications</h2>
+
       <p>
-        GitHub:
-        <a href="https://github.com/yourusername">
-          My GitHub Profile
-        </a>
+        Publications and research papers will
+        be added here.
       </p>
     </section>
+
+    <!-- Curriculum Vitae -->
+
+    <section id="cv" class="content-section">
+      <h2>Curriculum Vitae</h2>
+
+      <p>
+        My academic CV will be available here.
+      </p>
+
+      <!-- CV download button will be added later -->
+    </section>
+
+    <!-- Contact -->
+
+    <section id="contact" class="content-section">
+      <h2>Contact</h2>
+
+      <p>
+        Department of Mechanical Engineering<br>
+        University of Colorado Boulder
+      </p>
+
+      <p>
+        Email and academic profile links
+        will be added here.
+      </p>
+    </section>
+
   </main>
 
   <footer>
-    <p>© 2026 Your Name</p>
+    © 2026 Sarang Gosavi
   </footer>
 
 </body>
