@@ -1,0 +1,438 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Research projects of Sarang Gosavi">
+
+  <title>Research Projects | Sarang Gosavi</title>
+
+  <style>
+    :root {
+      --navy: #18324c;
+      --blue: #2868a5;
+      --text: #344054;
+      --muted: #667085;
+      --line: #e5eaf0;
+      --soft: #f5f8fc;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: white;
+      font-family: -apple-system, BlinkMacSystemFont,
+                   "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 28px;
+    }
+
+    /* =================================
+       NAVIGATION
+       ================================= */
+
+    header {
+      background: white;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 0;
+    }
+
+    .logo {
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--navy);
+      white-space: nowrap;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    nav a {
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--blue);
+    }
+
+    /* =================================
+       MAIN PAGE
+       ================================= */
+
+    main {
+      padding-top: 48px;
+      padding-bottom: 75px;
+      min-height: calc(100vh - 165px);
+    }
+
+    h1 {
+      color: var(--navy);
+      font-size: 35px;
+      margin: 0 0 30px;
+      line-height: 1.3;
+    }
+
+    /* =================================
+       RESEARCH PROJECT LAYOUT
+       ================================= */
+
+    .project {
+      display: grid;
+      grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+      gap: 35px;
+      align-items: start;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .project:first-of-type {
+      border-top: 1px solid var(--line);
+    }
+
+    /* =================================
+       PROJECT IMAGES
+       ================================= */
+
+    .project-image {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      border-radius: 10px;
+      overflow: hidden;
+      background: var(--soft);
+      border: 1px solid var(--line);
+    }
+
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .placeholder strong {
+      color: var(--navy);
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    /* =================================
+       PROJECT TEXT
+       ================================= */
+
+    .project-date {
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 7px;
+    }
+
+    .project h2 {
+      color: var(--navy);
+      font-size: 23px;
+      margin: 0 0 10px;
+      line-height: 1.35;
+    }
+
+    .institution {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0 0 16px;
+    }
+
+    .project p {
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    /* =================================
+       FOOTER
+       ================================= */
+
+    footer {
+      text-align: center;
+      padding: 22px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* =================================
+       MOBILE LAYOUT
+       ================================= */
+
+    @media (max-width: 720px) {
+
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      .container {
+        padding: 0 20px;
+      }
+
+      main {
+        padding-top: 35px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .project {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .project-image {
+        max-width: 420px;
+      }
+
+      .project h2 {
+        font-size: 21px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- =================================
+       TOP NAVIGATION
+       ================================= -->
+
+  <header>
+    <div class="container navbar">
+
+      <a href="index.html" class="logo">
+        Sarang Gosavi
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+
+        <a href="research.html"
+           class="active"
+           aria-current="page">
+          Research Projects
+        </a>
+
+        <a href="publications.html">
+          Publications
+        </a>
+
+        <a href="awards.html">
+          Awards & Honors
+        </a>
+
+        <a href="cv.html">
+          CV
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- =================================
+       RESEARCH PROJECTS
+       ================================= -->
+
+  <main class="container">
+
+    <h1>Research Projects</h1>
+
+    <!-- =================================
+         PROJECT 1:
+         PLASMONIC PHOTOCATALYSIS
+         ================================= -->
+
+    <article class="project">
+
+      <div class="project-image">
+
+        <div class="placeholder">
+          <strong>Plasmonic Photocatalysis</strong>
+          Scientific illustration coming soon
+        </div>
+
+      </div>
+
+      <div>
+
+        <div class="project-date">
+          August 2024 – Present
+        </div>
+
+        <h2>Plasmonic Photocatalysis</h2>
+
+        <p class="institution">
+          University of Colorado Boulder
+        </p>
+
+        <p>
+          Designed and developed a custom reactor
+          system for plasmonic catalysis, successfully
+          demonstrating the conversion of ammonia
+          into hydrogen.
+        </p>
+
+        <p>
+          Ongoing research aims to extend this
+          platform toward the complete destruction
+          of per- and polyfluoroalkyl substances
+          (PFAS) through light-driven catalytic
+          processes.
+        </p>
+
+      </div>
+
+    </article>
+
+    <!-- =================================
+         PROJECT 2:
+         CRYSTALS FOR HYDROGEN STORAGE
+         ================================= -->
+
+    <article class="project">
+
+      <div class="project-image">
+
+        <img
+          src="NaAlH4-I4_1_a.png"
+          alt="Crystal structure investigated using DFT for hydrogen storage"
+          loading="lazy">
+
+      </div>
+
+      <div>
+
+        <h2>Crystals for Hydrogen Storage</h2>
+
+        <p>
+          Performed <em>ab initio</em> density
+          functional theory (DFT) calculations
+          using Quantum ESPRESSO to investigate
+          the ground-state energies of crystalline
+          materials for hydrogen storage
+          applications, with the goal of
+          identifying promising materials for
+          efficient hydrogen storage.
+        </p>
+
+      </div>
+
+    </article>
+
+    <!-- =================================
+         PROJECT 3:
+         CI ENGINE PERFORMANCE
+         ================================= -->
+
+    <article class="project">
+
+      <div class="project-image">
+
+        <div class="placeholder">
+          <strong>CI Engine Performance</strong>
+          Image coming soon
+        </div>
+
+      </div>
+
+      <div>
+
+        <div class="project-date">
+          June 2018 – June 2019
+        </div>
+
+        <h2>
+          Biodiesel-Based Compression Ignition
+          Engine Performance
+        </h2>
+
+        <p class="institution">
+          Undergraduate Research Project
+        </p>
+
+        <p>
+          Investigated the performance of a
+          compression ignition engine under
+          different loading conditions using
+          biodiesel and petroleum diesel blends,
+          evaluating how fuel composition
+          influences engine performance.
+        </p>
+
+      </div>
+
+    </article>
+
+  </main>
+
+  <!-- =================================
+       FOOTER
+       ================================= -->
+
+  <footer>
+    © 2026 Sarang Gosavi
+  </footer>
+
+</body>
+</html>
