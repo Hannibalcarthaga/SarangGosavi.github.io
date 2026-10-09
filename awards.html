@@ -1,0 +1,375 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Awards and Honors of Sarang Gosavi">
+
+  <title>Awards & Honors | Sarang Gosavi</title>
+
+  <style>
+
+    :root {
+      --navy: #18324c;
+      --blue: #2868a5;
+      --text: #344054;
+      --muted: #667085;
+      --line: #e5eaf0;
+      --soft: #f5f8fc;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: white;
+      font-family: -apple-system, BlinkMacSystemFont,
+                   "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 28px;
+    }
+
+    /* NAVIGATION */
+
+    header {
+      background: white;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 0;
+    }
+
+    .logo {
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--navy);
+      white-space: nowrap;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--blue);
+    }
+
+    /* PAGE CONTENT */
+
+    main {
+      min-height: calc(100vh - 165px);
+      padding-top: 48px;
+      padding-bottom: 70px;
+    }
+
+    h1 {
+      color: var(--navy);
+      font-size: 35px;
+      margin: 0 0 30px;
+    }
+
+    .awards-list {
+      max-width: 900px;
+    }
+
+    .award {
+      display: grid;
+      grid-template-columns: 125px 1fr;
+      gap: 25px;
+      padding: 23px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .award:first-child {
+      border-top: 1px solid var(--line);
+    }
+
+    .year {
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .award h2 {
+      color: var(--navy);
+      font-size: 18px;
+      font-weight: 650;
+      line-height: 1.4;
+      margin: 0 0 6px;
+    }
+
+    .award p {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0;
+    }
+
+    /* FOOTER */
+
+    footer {
+      text-align: center;
+      padding: 22px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 720px) {
+
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      .container {
+        padding: 0 20px;
+      }
+
+      main {
+        padding-top: 35px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .award {
+        grid-template-columns: 1fr;
+        gap: 7px;
+        padding: 20px 0;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP NAVIGATION -->
+
+  <header>
+    <div class="container navbar">
+
+      <a href="index.html" class="logo">
+        Sarang Gosavi
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research Projects</a>
+        <a href="publications.html">Publications</a>
+        <a href="awards.html" class="active"
+           aria-current="page">Awards & Honors</a>
+        <a href="cv.html">CV</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- AWARDS AND HONORS -->
+
+  <main class="container">
+
+    <h1>Awards & Honors</h1>
+
+    <div class="awards-list">
+
+      <!-- RYLAND FELLOWSHIP -->
+
+      <article class="award">
+        <div class="year">August 2026</div>
+
+        <div>
+          <h2>
+            Dwight E. and Jessie D. Ryland
+            Graduate Fellowship
+          </h2>
+          <p>
+            College of Engineering and Applied Science,
+            University of Colorado Boulder
+          </p>
+        </div>
+      </article>
+
+      <!-- CEAS ASCENT FELLOWSHIP -->
+
+      <article class="award">
+        <div class="year">June 2026</div>
+
+        <div>
+          <h2>CEAS I&E Ascent Fellowship</h2>
+          <p>
+            Venture Partners at CU Boulder
+          </p>
+        </div>
+      </article>
+
+      <!-- COURSE ASSISTANT AWARD -->
+
+      <article class="award">
+        <div class="year">November 2025</div>
+
+        <div>
+          <h2>
+            Fall 2025 Outstanding MS Mechanical
+            Engineering Course Assistant Award
+          </h2>
+          <p>
+            Paul M. Rady Department of Mechanical
+            Engineering, University of Colorado Boulder
+          </p>
+        </div>
+      </article>
+
+      <!-- LAB VENTURE CHALLENGE -->
+
+      <article class="award">
+        <div class="year">October 2025</div>
+
+        <div>
+          <h2>Lab Venture Challenge (LVC 2025)</h2>
+          <p>
+            Colorado Office of Economic Development
+            and International Trade (OEDIT) and
+            Venture Partners at CU Boulder
+          </p>
+        </div>
+      </article>
+
+      <!-- WEFTEC SUPPORT AWARD -->
+
+      <article class="award">
+        <div class="year">October 2025</div>
+
+        <div>
+          <h2>
+            Mechanical Engineering MS Support Award
+            (WEFTEC 2025)
+          </h2>
+          <p>
+            Dana Shinn and Paul M. Rady Department
+            of Mechanical Engineering,
+            University of Colorado Boulder
+          </p>
+        </div>
+      </article>
+
+      <!-- TRAVEL AWARD -->
+
+      <article class="award">
+        <div class="year">August 2025</div>
+
+        <div>
+          <h2>
+            Mechanical Engineering Travel Award
+            (Rocky Mountain Water Conference)
+          </h2>
+          <p>
+            Paul M. Rady Department of Mechanical
+            Engineering, University of Colorado Boulder
+          </p>
+        </div>
+      </article>
+
+      <!-- NSF I-CORPS -->
+
+      <article class="award">
+        <div class="year">June 2025</div>
+
+        <div>
+          <h2>NSF National I-Corps</h2>
+          <p>Product We Need Award</p>
+        </div>
+      </article>
+
+      <!-- GRADUATE SCHOLARSHIP -->
+
+      <article class="award">
+        <div class="year">
+          2024–2025
+        </div>
+
+        <div>
+          <h2>
+            Mechanical Engineering Graduate Scholarship
+          </h2>
+          <p>
+            Awarded August 2024, January 2025,
+            and August 2025.
+            Paul M. Rady Department of Mechanical
+            Engineering, University of Colorado Boulder
+          </p>
+        </div>
+      </article>
+
+      <!-- DEPARTMENTAL SCHOLARSHIP -->
+
+      <article class="award">
+        <div class="year">August 2024</div>
+
+        <div>
+          <h2>ME MS Departmental Scholarship</h2>
+          <p>
+            Paul M. Rady Department of Mechanical
+            Engineering, University of Colorado Boulder
+          </p>
+        </div>
+      </article>
+
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 Sarang Gosavi
+  </footer>
+
+</body>
+</html>
